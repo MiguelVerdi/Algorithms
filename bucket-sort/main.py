@@ -101,14 +101,7 @@ class bucket_sort():
             
             
         return extreme_values
-    
-    
-        
-            
-        
-        
-        
-        
+
         
         
     
@@ -129,8 +122,6 @@ class bucket_sort():
         
         
         
-        
-        
         #Creation 
         for number in Array: 
             
@@ -147,13 +138,6 @@ class bucket_sort():
         
             buckets[index].append(number)
         
-        
-        
-       
-        
-        
-  
-
 
 
         for bucket in buckets:  
@@ -173,19 +157,21 @@ class bucket_sort():
                 
             sorted_list += bucket 
                
-            
         
         return sorted_list
     
   
-    
         
-        
-        
-        
-        
-        
-        
+    def show(self,original_array, sorted_array):
+        print("Result of sorting algorithm:")
+        print("---------------------------------------")
+        print("Sorted data:")
+        print(", ".join(map(str, sorted_array)))
+        print("---------------------------------------")
+        print('Original data:')
+        print(", ".join(map(str, original_array)))
+        print("---------------------------------------")
+
         
 if __name__ == "__main__":
 
@@ -195,10 +181,15 @@ if __name__ == "__main__":
     
     
     sort1 = New_sort.sort(New_sort.List) 
-    sor2 = sorted(New_sort.List, reverse = True)
+     
     
-    print(sort1)
-    print(sort1 == sor2)
+    New_sort.show(New_sort.List,sort1)
+    
+    
+    
+
+
+    
  
         
         
