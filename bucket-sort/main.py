@@ -1,5 +1,3 @@
-import math
-
 
 """
 Bucket sort algorithm. 
@@ -127,9 +125,8 @@ class bucket_sort():
             
             if number != max_item: 
                 #If the number is not the max item, we put in in one of the buckets.
-                
-                index = math.floor(self.n*(number - min_item)/(max_item - min_item))
-                
+                #index = math.floor(self.n*(number - min_item)/(max_item - min_item))
+                index = int(self.n*(number - min_item)//(max_item - min_item))
                 
             else:
                 #If the number is the max item, it goes at the last bucket. 
@@ -165,12 +162,13 @@ class bucket_sort():
     def show(self,original_array, sorted_array):
         print("Result of sorting algorithm:")
         print("---------------------------------------")
-        print("Sorted data:")
-        print(", ".join(map(str, sorted_array)))
-        print("---------------------------------------")
         print('Original data:')
         print(", ".join(map(str, original_array)))
         print("---------------------------------------")
+        print("Sorted data:")
+        print(", ".join(map(str, sorted_array)))
+        print("---------------------------------------")
+        
 
         
 if __name__ == "__main__":
